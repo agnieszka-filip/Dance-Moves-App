@@ -1,0 +1,24 @@
+@import "src/variables.scss";
+
+.navbar {
+    background-color: $purple;
+}
+
+.nav-link {
+    color: $blue;
+}
+
+.navbar-brand {
+    color: $pink;
+}
+
+.btn-outline-primary {
+    color: $pink;
+    border-color: $pink;
+}
+
+.btn-outline-primary:hover {
+    color: $purple;
+    background-color: $pink;
+    border-color: $pink;
+}
