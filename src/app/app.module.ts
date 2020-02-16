@@ -15,7 +15,7 @@ import { DanceMoveItemComponent } from './dance-moves/dance-moves-list/dance-mov
     DanceMovesComponent,
     DanceMovesListComponent,
     DanceMovesDetailsComponent,
-    DanceMoveItemComponent
+    DanceMoveItemComponent,
   ],
   imports: [
     BrowserModule

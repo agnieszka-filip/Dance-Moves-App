@@ -1,24 +1,27 @@
 @import "src/variables.scss";
 
-.navbar {
+.navbar-style {
     background-color: $purple;
+    padding: 1%;
+    .app-logo {
+        color: rgb(78, 216, 151);
+        font-size: 35px;
+        font-family: 'Fredoka One', cursive;
+        margin-right: 2%;
+    }
+    .link-style {
+        color: $pink;
+        font-size: 18px;
+        margin-right: 10%;
+    }
 }
 
-.nav-link {
-    color: $blue;
-}
-
-.navbar-brand {
-    color: $pink;
-}
-
-.btn-outline-primary {
+.btn-header {
     color: $pink;
     border-color: $pink;
-}
-
-.btn-outline-primary:hover {
-    color: $purple;
-    background-color: $pink;
-    border-color: $pink;
+    &:hover {
+        color: $purple;
+        background-color: $pink;
+        border-color: $pink;
+    }
 }

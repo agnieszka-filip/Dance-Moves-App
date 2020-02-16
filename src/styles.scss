@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "src/variables.scss";
 
-body { background-color: $blue; 
+body { 
+    background-color: $blue; 
+    font-family: $main-font;
+}
+
+.btn-new-move {
+    color: $purple;
+    background-color: $pink;
+    border-color: $pink;
 }
