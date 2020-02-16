@@ -8,8 +8,8 @@ import { DanceMove } from './dance-move.model';
 })
 export class DanceMovesListComponent implements OnInit {
   danceMoves: DanceMove[] = [
-    new DanceMove('A Test Dance Move', 'This is just a test', 'https://i.pinimg.com/originals/ce/18/62/ce1862200473d486cb0ee319399730e6.jpg'),
-    new DanceMove('A Test Dance Move', 'This is just a test', 'https://i.pinimg.com/originals/ce/18/62/ce1862200473d486cb0ee319399730e6.jpg')
+    new DanceMove('Iron X', 'This is just a test', 'https://i.pinimg.com/originals/ce/18/62/ce1862200473d486cb0ee319399730e6.jpg'),
+    new DanceMove('Titanic', 'This is just a test', 'https://i.pinimg.com/originals/49/2b/51/492b515fd3421f1580a6e44e5ae82c6d.jpg')
   ];
   constructor() { }
 
