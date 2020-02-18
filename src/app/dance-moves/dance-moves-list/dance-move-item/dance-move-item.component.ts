@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DanceMove } from '../dance-move.model';
 
 @Component({
   selector: 'app-dance-move-item',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dance-move-item.component.scss']
 })
 export class DanceMoveItemComponent implements OnInit {
-
+  @Input() danceMove: DanceMove;
   constructor() { }
 
   ngOnInit() {
