@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { DanceMove } from '../dance-move.model';
 
 @Component({
@@ -8,9 +8,14 @@ import { DanceMove } from '../dance-move.model';
 })
 export class DanceMoveItemComponent implements OnInit {
   @Input() danceMove: DanceMove;
+  @Output() danceMoveClicked = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClicked() {
+    this.danceMoveClicked.emit();
   }
 
 }

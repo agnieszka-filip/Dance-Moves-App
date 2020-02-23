@@ -9,7 +9,8 @@
         <div class="col-xs-12">
             <app-dance-move-item 
             *ngFor="let danceMoveEl of danceMoves"
-            [danceMove]="danceMoveEl"></app-dance-move-item>
+            [danceMove]="danceMoveEl"
+            (danceMoveClicked)="onDanceMoveClicked(danceMoveEl)"></app-dance-move-item>
         </div>
     </div>
 </div>
