@@ -1,1 +1,13 @@
-<p>dance-move-item works!</p>
+<a href="#" class="list-group-item clearfix"
+(click)="onClicked()">
+        <div class="pull-left">
+            <h4 class="list-group-item-heading">{{ danceMove.name }}</h4>
+            <p class="list-group-item-text">{{ danceMove.description }}</p>
+        </div>
+        <span class="pull-right">
+            <img [src]="danceMove.imageVideoPath"
+                alt="{{ danceMove.name }}"
+                class="img-responsive"
+                style="max-height: 60px;">
+        </span>
+</a>
