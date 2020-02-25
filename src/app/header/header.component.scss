@@ -14,6 +14,19 @@
         font-size: 18px;
         margin-right: 10%;
     }
+    .navbar-search {
+        @media (max-width: 991px) {
+            text-align: right;
+            margin: 0px;
+        }
+    }
+    .search-form {
+        @media (max-width: 991px) {
+            float: right;
+            align-items: flex-end;
+            margin: 0px;
+        }
+    }
 }
 
 .btn-header {

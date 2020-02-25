@@ -8,7 +8,7 @@ import { DanceMove } from './dance-moves-list/dance-move.model';
 })
 export class DanceMovesComponent implements OnInit {
   clickedDanceMove: DanceMove;
-  constructor() { }
+  
 
   ngOnInit() {
   }

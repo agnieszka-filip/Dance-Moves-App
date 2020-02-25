@@ -14,7 +14,7 @@ export class DanceMovesListComponent implements OnInit {
     new DanceMove('Titanic', 'This is just a test',
     'https://i.pinimg.com/originals/49/2b/51/492b515fd3421f1580a6e44e5ae82c6d.jpg')
   ];
-  constructor() { }
+  
 
   ngOnInit() {
   }
