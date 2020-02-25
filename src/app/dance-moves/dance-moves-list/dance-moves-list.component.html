@@ -1,7 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <button class="btn btn-new-move" style="margin-top: 15%;">New Move</button>
+            <button class="btn btn-new-move"
+            style="margin-top: 15%;">
+            New Move
+            </button>
         </div>
     </div>
     <hr>
@@ -10,7 +13,8 @@
             <app-dance-move-item 
             *ngFor="let danceMoveEl of danceMoves"
             [danceMove]="danceMoveEl"
-            (danceMoveClicked)="onDanceMoveClicked(danceMoveEl)"></app-dance-move-item>
+            (danceMoveClicked)="onDanceMoveClicked(danceMoveEl)">
+            </app-dance-move-item>
         </div>
     </div>
 </div>
