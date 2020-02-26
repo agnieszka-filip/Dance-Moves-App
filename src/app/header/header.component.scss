@@ -1,4 +1,7 @@
 @import "src/app/styles/variables.scss";
+@import "node_modules/bootstrap/scss/_functions.scss";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 
 .navbar-style {
     background-color: $purple;
@@ -9,23 +12,15 @@
         font-family: 'Fredoka One', cursive;
         margin-right: 2%;
     }
+    @include media-breakpoint-down(md) {
+        .app-logo {
+            font-size: 26px;
+        }
+    }
     .link-style {
         color: $pink;
         font-size: 18px;
         margin-right: 10%;
-    }
-    .navbar-search {
-        @media (max-width: 991px) {
-            text-align: right;
-            margin: 0px;
-        }
-    }
-    .search-form {
-        @media (max-width: 991px) {
-            float: right;
-            align-items: flex-end;
-            margin: 0px;
-        }
     }
 }
 
