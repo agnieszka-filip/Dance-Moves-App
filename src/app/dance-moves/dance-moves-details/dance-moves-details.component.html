@@ -8,7 +8,7 @@
             style="max-height: 350px; margin-top: 7%;">
         </div>
     </div>
-    <div class="row">
+    <div class="row move-name">
         <div class="col-xs-12">
             <h1>{{ danceMove.name }}</h1>
         </div>
@@ -16,19 +16,20 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="btn-group"
-            appDropdown>
+            appDropdown #r="appDropdown">
                 <button type="button"
-                class="btn dropdown-toggle">
+                class="btn dropdown-toggle btn-details">
                 Options<span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Delete</a></li>
+            <ul class="dropdown-menu"
+                [ngClass]="{'show':r.isOpen}">
+                <li class="dropdown-i"><a href="#">Edit</a></li>
+                <li class="dropdown-i"><a href="#">Delete</a></li>
             </ul>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row move-description">
         <div class="col-xs 12">
             {{ danceMove.description }}
         </div>

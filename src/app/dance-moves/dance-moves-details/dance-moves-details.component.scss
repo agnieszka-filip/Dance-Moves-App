@@ -1,0 +1,22 @@
+@import "src/app/styles/_variables.scss";
+
+.btn-details {
+    background-color: $green;
+}
+
+.dropdown-i {
+    color: #000000;
+    text-decoration: none !important;
+    &:hover {
+        background-color: $pink;
+        color: $purple;
+    }
+}
+
+.move-description {
+    margin-top: 7%;
+}
+
+.move-name {
+    margin-bottom: 5%;
+}
