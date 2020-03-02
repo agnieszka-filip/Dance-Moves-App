@@ -4,11 +4,9 @@
     background-color: $green;
 }
 
-.dropdown-i {
-    color: #000000;
-    text-decoration: none !important;
-    &:hover {
-        background-color: $pink;
+.dropdown-i:hover {
+    background-color: $pink;
+    .dropdown-link {
         color: $purple;
     }
 }

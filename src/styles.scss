@@ -11,3 +11,11 @@ body {
     background-color: $pink;
     border-color: $pink;
 }
+
+a {
+    text-decoration: none !important;
+    color: #000000;
+    &:hover {
+        color: #000000;
+    }
+}
