@@ -11,8 +11,16 @@ import { DanceMovesService } from './dance-moves.service';
 export class DanceMovesComponent implements OnInit {
   clickedDanceMove: DanceMove;
   
+  constructor(private danceMovesService: DanceMovesService) {
+  }
 
   ngOnInit() {
+    this.danceMovesService.danceMoveClicked
+    .subscribe(
+      (danceMove: DanceMove) => {
+        this.clickedDanceMove = danceMove;
+      }
+    );
   }
 
 }
