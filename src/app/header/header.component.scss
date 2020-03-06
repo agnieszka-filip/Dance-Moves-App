@@ -1,4 +1,4 @@
-@import "src/app/styles/variables.scss";
+@import "src/app/styles/_variables.scss";
 @import "node_modules/bootstrap/scss/_functions.scss";
 @import "node_modules/bootstrap/scss/_variables.scss";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
@@ -7,7 +7,7 @@
     background-color: $purple;
     padding: 1%;
     .app-logo {
-        color: rgb(78, 216, 151);
+        color: $green;
         font-size: 35px;
         font-family: 'Fredoka One', cursive;
         margin-right: 2%;
@@ -22,14 +22,19 @@
         font-size: 18px;
         margin-right: 10%;
     }
-}
-
-.btn-header {
-    color: $pink;
-    border-color: $pink;
-    &:hover {
-        color: $purple;
-        background-color: $pink;
+    .dropdown-i-style:hover {
+        background-color: $green;
+        color: #ffffff;
+    }
+    .btn-header {
+        color: $pink;
         border-color: $pink;
+        &:hover {
+            color: $purple;
+            background-color: $pink;
+            border-color: $pink;
+        }
     }
 }
+
+
