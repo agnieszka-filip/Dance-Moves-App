@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, } from '@angular/core';
 import { DanceMove } from '../dance-move.model';
-import { DanceMovesService } from '../../dance-moves.service';
 
 @Component({
   selector: 'app-dance-move-item',
@@ -9,15 +8,11 @@ import { DanceMovesService } from '../../dance-moves.service';
 })
 export class DanceMoveItemComponent implements OnInit {
   @Input() danceMove: DanceMove;
+  @Input() index: number;
   
-  constructor (private danceMovesService: DanceMovesService) {
-  }
 
   ngOnInit() {
   }
 
-  onClicked() {
-    this.danceMovesService.danceMoveClicked.emit(this.danceMove);
-  }
 
 }

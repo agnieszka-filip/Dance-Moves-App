@@ -14,4 +14,8 @@ export class DanceMovesService {
       getDanceMoves() {
           return this.danceMoves.slice();
       }
+
+      getDanceMove(index: number) {
+          return this.danceMoves[index];
+      }
 }

@@ -1,6 +1,7 @@
 <a
  class="list-group-item clearfix"
- (click)="onClicked()"
+ [routerLink]="[index]"
+ routerLinkActive="active custom-active"
  style="cursor: pointer;">
         <div class="pull-left">
             <h4 class="list-group-item-heading">{{ danceMove.name }}</h4>
