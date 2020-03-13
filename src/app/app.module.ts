@@ -9,6 +9,7 @@ import { DanceMovesDetailsComponent } from './dance-moves/dance-moves-details/da
 import { DanceMoveItemComponent } from './dance-moves/dance-moves-list/dance-move-item/dance-move-item.component';
 import { DropdownDirective } from './dropdown.directive';
 import { AppRoutingModule } from './app-routing.module';
+import { DanceMovesStartComponent } from './dance-moves/dance-moves-start/dance-moves-start.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     DanceMovesListComponent,
     DanceMovesDetailsComponent,
     DanceMoveItemComponent,
-    DropdownDirective
+    DropdownDirective,
+    DanceMovesStartComponent
   ],
   imports: [
     BrowserModule,

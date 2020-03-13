@@ -5,13 +5,7 @@
             </app-dance-moves-list>
         </div>
         <div class="col-md-7">
-            <app-dance-moves-details
-            *ngIf="clickedDanceMove; else infoText"
-            [danceMove]="clickedDanceMove">
-            </app-dance-moves-details>
-            <ng-template #infoText>
-                <p>Select a dance move!</p>
-            </ng-template>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
