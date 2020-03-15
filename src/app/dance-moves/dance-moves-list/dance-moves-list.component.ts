@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { DanceMove } from './dance-move.model';
 import { DanceMovesService } from '../dance-moves.service';
+
 
 @Component({
   selector: 'app-dance-moves-list',
@@ -10,11 +13,16 @@ import { DanceMovesService } from '../dance-moves.service';
 export class DanceMovesListComponent implements OnInit {
   danceMoves: DanceMove[];
   
-  constructor(private danceMovesService: DanceMovesService) {
+  constructor(private danceMovesService: DanceMovesService,
+              private router: Router,
+              private route: ActivatedRoute) {
   } 
 
   ngOnInit() {
     this.danceMoves = this.danceMovesService.getDanceMoves();
   }
 
+  onNewDanceMove() {
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
 }

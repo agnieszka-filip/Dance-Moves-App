@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+
 import { DanceMove } from '../dance-moves-list/dance-move.model';
-import { ActivatedRoute, Params } from '@angular/router';
 import { DanceMovesService } from '../dance-moves.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class DanceMovesDetailsComponent implements OnInit {
   id: number;
 
   constructor (private danceMovesService: DanceMovesService,
-               private route: ActivatedRoute) { 
+               private route: ActivatedRoute,
+               private router: Router) { 
                }
 
   ngOnInit() {
@@ -24,5 +26,9 @@ export class DanceMovesDetailsComponent implements OnInit {
         this.danceMove = this.danceMovesService.getDanceMove(this.id);
       }
     );
+  }
+
+  onEditDanceMove() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
   }
 }
