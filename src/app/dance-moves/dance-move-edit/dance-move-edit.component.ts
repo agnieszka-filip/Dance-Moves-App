@@ -3,8 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-dance-move-edit',
-  templateUrl: './dance-move-edit.component.html',
-  styleUrls: ['./dance-move-edit.component.scss']
+  templateUrl: './dance-move-edit.component.html'
 })
 export class DanceMoveEditComponent implements OnInit {
   id: number;
