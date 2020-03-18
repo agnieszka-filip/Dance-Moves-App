@@ -23,12 +23,14 @@
         margin-top: 5%;
         .dropdown-link {
             color: $pink;
-            font-size: 18px;  
+            font-size: 18px;
+            cursor: pointer;  
         }
     }
     .dropdown-i-style:hover {
         background-color: $green;
         color: #ffffff;
+        cursor: pointer; 
     }
     .btn-header {
         color: $pink;

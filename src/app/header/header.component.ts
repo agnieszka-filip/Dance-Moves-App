@@ -6,13 +6,4 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-    title = 'angular-clickoutside';
- 
-    showBox = true;
-    
-    constructor() {}
-    
-    onClickedOutside(e: Event) {
-        this.showBox = false;
-  }
 }

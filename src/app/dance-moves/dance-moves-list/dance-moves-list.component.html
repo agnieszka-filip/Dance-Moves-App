@@ -2,8 +2,9 @@
     <div class="row">
         <div class="col-xs-12">
             <button class="btn btn-new-move"
-            style="margin-top: 15%;">
-            New Move
+            style="margin-top: 15%;"
+            (click)="onNewDanceMove();">
+            Add New
             </button>
         </div>
     </div>
@@ -11,8 +12,9 @@
     <div class="row">
         <div class="col-xs-12">
             <app-dance-move-item 
-            *ngFor="let danceMoveEl of danceMoves"
-            [danceMove]="danceMoveEl">
+            *ngFor="let danceMoveEl of danceMoves; let i = index"
+            [danceMove]="danceMoveEl"
+            [index]="i">
             </app-dance-move-item>
         </div>
     </div>

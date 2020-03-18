@@ -23,8 +23,15 @@
             </button>
             <ul class="dropdown-menu"
                 [ngClass]="{'show':r.isOpen}">
-                <li class="dropdown-i"><a class="dropdown-link" href="#">Edit</a></li>
-                <li class="dropdown-i"><a class="dropdown-link" href="#">Delete</a></li>
+                <li class="dropdown-i">
+                    <a 
+                    class="dropdown-link"
+                    (click)="onEditDanceMove();">
+                    Edit</a></li>
+                <li class="dropdown-i">
+                    <a 
+                    class="dropdown-link">
+                    Delete</a></li>
             </ul>
             </div>
         </div>
