@@ -1,8 +1,6 @@
-import { EventEmitter } from '@angular/core';
 import { DanceMove } from './dance-moves-list/dance-move.model';
 
 export class DanceMovesService {
-    danceMoveClicked = new EventEmitter<DanceMove>();
 
     private danceMoves: DanceMove[] = [
         new DanceMove('Elbow Aysha', 'This is just a test',

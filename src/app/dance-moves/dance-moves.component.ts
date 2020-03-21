@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DanceMove } from './dance-moves-list/dance-move.model';
 import { DanceMovesService } from './dance-moves.service';
 
 @Component({
@@ -9,17 +8,10 @@ import { DanceMovesService } from './dance-moves.service';
   providers: [DanceMovesService]
 })
 export class DanceMovesComponent implements OnInit {
-  clickedDanceMove: DanceMove;
   
-  constructor(private danceMovesService: DanceMovesService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.danceMovesService.danceMoveClicked
-    .subscribe(
-      (danceMove: DanceMove) => {
-        this.clickedDanceMove = danceMove;
-      }
-    );
   }
 }
