@@ -1,0 +1,18 @@
+@import "src/app/styles/_variables.scss";
+
+textarea, input {
+    width: 50vw;
+    display: table;
+}
+.required-skills-form {
+    width: 46vw;
+    margin: 0vh 0.75vw 10% 1.2vw;
+}
+
+.btn-save {
+    background-color: $green;
+}
+
+.btn-cancel {
+    background-color: $red;
+}
