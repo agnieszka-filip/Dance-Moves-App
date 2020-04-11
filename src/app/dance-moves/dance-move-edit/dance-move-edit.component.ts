@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormArray } from '@angular/forms';
 
 import { DanceMovesService } from '../dance-moves.service';
 
@@ -28,21 +28,49 @@ export class DanceMoveEditComponent implements OnInit {
       );
   }
 
+  onSubmit() {
+    console.log(this.danceMoveForm);
+  }
+
+  onAddSkill() {
+    (<FormArray>this.danceMoveForm.get('requiredSkills')).push(
+      new FormGroup({
+        'name': new FormControl()
+      })
+    );
+  }
+
   private initForm() {
     let danceMoveName = '';
     let imageVideoPath = '';
     let description = '';
+    let requiredSkills = new FormArray([]);
 
     if (this.editMode) {
       const danceMove = this.danceMoveService.getDanceMove(this.id);
       danceMoveName = danceMove.name;
       imageVideoPath = danceMove.imageVideoPath;
       description = danceMove.description;
+      if (danceMove['requiredSkills']) {
+        for (let requiredSkill of danceMove.requiredSkills) {
+          requiredSkills.push(
+            new FormGroup({
+              'name': new FormControl(requiredSkill.name),
+           }) 
+          )
+        }
+      }
     }
     this.danceMoveForm = new FormGroup({
       'name': new FormControl(danceMoveName),
       'imageVideoPath': new FormControl(imageVideoPath),
-      'description': new FormControl(description)
+      'description': new FormControl(description),
+      'requiredSkills': requiredSkills
     });
   }
+
+  get controls() { 
+    return (<FormArray>this.danceMoveForm.get('requiredSkills')).controls;
+  }
+  
 }

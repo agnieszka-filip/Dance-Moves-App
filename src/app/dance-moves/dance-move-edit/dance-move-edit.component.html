@@ -1,7 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <form>
+            <form
+                [formGroup]="danceMoveForm"
+                (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div
                         class="col-xs-12"
@@ -29,7 +31,8 @@
                             <input
                                 type="text"
                                 id="name"
-                                class="form-control">
+                                class="form-control"
+                                formControlName="name">
                         </div>
                     </div>
                 </div>
@@ -42,7 +45,8 @@
                             <input
                                 type="text"
                                 id="imageVideoPath"
-                                class="form-control">
+                                class="form-control"
+                                formControlName="imageVideoPath">
                         </div>
                     </div>
                 </div>
@@ -64,21 +68,40 @@
                             	type="text"
                             	id="description"
                                 class="form-control"
-                                rows="7">
+                                rows="7"
+                                formControlName="description">
                             </textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12">
-                       <div class="row">
+                    <div  
+                        class="col-xs-12"
+                        formArrayName="requiredSkills">
+                       <div 
+                            class="row"
+                            *ngFor="let requiredSkillsCtrl of controls; let i = index"
+                            [formGroupName]="i">
                            <div class="col-xs-10">
                                <input
                                 type="text"
-                                class="form-control required-skills-form">
+                                class="form-control required-skills-form"
+                                formControlName="name">
                            </div>
                            <div class="col-xs-2">
                                <button class="btn btn-danger">X</button>
+                           </div>
+                       </div>
+                       <hr>
+                       <div class="row">
+                           <div class="col-xs-12">
+                               <button 
+                                    class="btn btn-save"
+                                    style="margin: 0% 0% 5vh 1.2vw"
+                                    (click)="onAddSkill()"
+                                    type="button">
+                                   Add Skill
+                               </button>
                            </div>
                        </div>
                     </div>
