@@ -45,7 +45,16 @@
     <div class="row">
         <div class="col-xs-12"
             style="margin-bottom: 7%;">
-            Required skills
+            <p
+                style="margin: 15% 0% 1% 0%;">
+                <b>Required Skills</b>
+            </p>
+            <ul class="list-group">
+                <li
+                    *ngFor="let requiredSkill of danceMove.requiredSkills">
+                    {{ requiredSkill.name }}
+                </li>
+            </ul>
         </div>
     </div>
 </div>
