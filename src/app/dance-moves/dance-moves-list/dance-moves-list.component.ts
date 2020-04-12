@@ -20,6 +20,12 @@ export class DanceMovesListComponent implements OnInit {
 
   ngOnInit() {
     this.danceMoves = this.danceMovesService.getDanceMoves();
+    this.danceMovesService.danceMovesChanged
+      .subscribe(
+        (danceMoves: DanceMove[]) => {
+          this.danceMoves = danceMoves;
+        }
+      );
   }
 
   onNewDanceMove() {

@@ -9,7 +9,6 @@
                         class="col-xs-12"
                         style="margin-bottom: 6%;
                         margin-top: 3%;">
-
                         <button
                             type="submit"
                             class="btn btn-save"
@@ -18,7 +17,8 @@
                         </button>
                         <button
                             class="btn btn-cancel"
-                            type="button">
+                            type="button"
+                            (click)="onCancel()">
                         Cancel
                         </button>
                     </div>
@@ -90,7 +90,11 @@
                                 formControlName="name">
                            </div>
                            <div class="col-xs-2">
-                               <button class="btn btn-danger">X</button>
+                               <button 
+                                    class="btn btn-danger"
+                                    type="button">
+                                    X
+                                </button>
                            </div>
                        </div>
                        <hr>

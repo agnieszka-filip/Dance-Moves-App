@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { DanceMovesService } from '../dance-moves.service';
+import { DanceMove } from '../dance-moves-list/dance-move.model';
 
 @Component({
   selector: 'app-dance-move-edit',
@@ -15,7 +16,8 @@ export class DanceMoveEditComponent implements OnInit {
   danceMoveForm: FormGroup;
 
   constructor(private route: ActivatedRoute,
-  private danceMoveService: DanceMovesService) { }
+              private danceMoveService: DanceMovesService,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.params
@@ -29,7 +31,18 @@ export class DanceMoveEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.danceMoveForm);
+    const newDanceMove = new DanceMove(
+      this.danceMoveForm.value['name'],
+      this.danceMoveForm.value['description'],
+      this.danceMoveForm.value['imageVideoPath'],
+      this.danceMoveForm.value['requiredSkills']);
+
+    if (this.editMode) {
+      this.danceMoveService.updateDanceMove(this.id, newDanceMove)
+    } else {
+      this.danceMoveService.addDanceMove(newDanceMove);
+    }
+    this.onCancel();
   }
 
   onAddSkill() {
@@ -73,4 +86,8 @@ export class DanceMoveEditComponent implements OnInit {
     return (<FormArray>this.danceMoveForm.get('requiredSkills')).controls;
   }
   
+  onCancel() {
+    this.router.navigate(['../'], { relativeTo: this.route });
+  }
+
 }
