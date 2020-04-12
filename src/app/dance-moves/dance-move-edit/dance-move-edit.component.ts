@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { DanceMovesService } from '../dance-moves.service';
 
@@ -35,7 +35,7 @@ export class DanceMoveEditComponent implements OnInit {
   onAddSkill() {
     (<FormArray>this.danceMoveForm.get('requiredSkills')).push(
       new FormGroup({
-        'name': new FormControl()
+        'name': new FormControl(null, Validators.required)
       })
     );
   }
@@ -62,8 +62,8 @@ export class DanceMoveEditComponent implements OnInit {
       }
     }
     this.danceMoveForm = new FormGroup({
-      'name': new FormControl(danceMoveName),
-      'imageVideoPath': new FormControl(imageVideoPath),
+      'name': new FormControl(danceMoveName, Validators.required),
+      'imageVideoPath': new FormControl(imageVideoPath, Validators.required),
       'description': new FormControl(description),
       'requiredSkills': requiredSkills
     });
