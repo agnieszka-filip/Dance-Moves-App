@@ -53,6 +53,10 @@ export class DanceMoveEditComponent implements OnInit {
     );
   }
 
+  onDeleteSkill(index: number) {
+    (<FormArray>this.danceMoveForm.get('requiredSkills')).removeAt(index);
+  }
+
   private initForm() {
     let danceMoveName = '';
     let imageVideoPath = '';

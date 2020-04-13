@@ -12,6 +12,7 @@ import { DropdownDirective } from './dropdown.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { DanceMovesStartComponent } from './dance-moves/dance-moves-start/dance-moves-start.component';
 import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move-edit.component';
+import { DanceMovesService } from './dance-moves/dance-moves.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DanceMovesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
