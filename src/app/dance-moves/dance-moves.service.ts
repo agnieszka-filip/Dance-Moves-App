@@ -4,7 +4,6 @@ import { Subject } from 'rxjs';
 import { DanceMove } from './dance-moves-list/dance-move.model';
 import { RequiredSkill } from './required-skill.model';
 
-
 @Injectable()
 export class DanceMovesService {
     danceMovesChanged = new Subject<DanceMove[]>();
