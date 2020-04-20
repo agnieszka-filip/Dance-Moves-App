@@ -31,4 +31,9 @@ export class DanceMovesDetailsComponent implements OnInit {
   onEditDanceMove() {
     this.router.navigate(['edit'], {relativeTo: this.route});
   }
+
+  onDeleteDanceMove() {
+    this.danceMovesService.deleteDanceMove(this.id);
+    this.router.navigate(['/dance-moves']);
+  }
 }

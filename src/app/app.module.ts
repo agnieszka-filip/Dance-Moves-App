@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,7 @@ import { DropdownDirective } from './dropdown.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { DanceMovesStartComponent } from './dance-moves/dance-moves-start/dance-moves-start.component';
 import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move-edit.component';
+import { DanceMovesService } from './dance-moves/dance-moves.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DanceMovesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

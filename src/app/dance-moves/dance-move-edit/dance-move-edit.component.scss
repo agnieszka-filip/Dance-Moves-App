@@ -1,0 +1,26 @@
+@import "src/app/styles/_variables.scss";
+
+textarea, input {
+    width: 50vw;
+    display: table;
+}
+.required-skills-form {
+    width: 46vw;
+    margin: 0vh 0.75vw 2% 1.2vw;
+}
+
+.btns-container {
+  margin-bottom: 6%;
+  margin-top: 3%;
+}
+
+.btn-save {
+    background-color: $green;
+}
+
+.btn-cancel {
+    background-color: $red;
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
