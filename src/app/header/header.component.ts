@@ -14,4 +14,8 @@ export class HeaderComponent {
     onSaveData() {
         this.dataStorageService.storeDanceMoves();
     }
+
+    onFetchData() {
+        this.dataStorageService.fetchDanceMoves();
+    }
 }

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { DanceMovesService } from './dance-moves.service';
+import { DanceMove } from './dance-moves-list/dance-move.model';
 
 @Injectable()
 export class DataStorageService {
@@ -13,6 +15,14 @@ export class DataStorageService {
             .put('https://dance-moves-5afda.firebaseio.com/dance-moves.json', danceMoves)
             .subscribe(response => {
                 console.log(response);
+            });
+    }
+
+    fetchDanceMoves() {
+        this.http
+            .get<DanceMove[]>('https://dance-moves-5afda.firebaseio.com/dance-moves.json')
+            .subscribe(danceMoves => {
+                this.danceMovesService.setDanceMoves(danceMoves);
             });
     }
 }

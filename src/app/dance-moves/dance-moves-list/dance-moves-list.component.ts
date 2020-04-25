@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { DanceMove } from './dance-move.model';
 import { DanceMovesService } from '../dance-moves.service';
 
-
 @Component({
   selector: 'app-dance-moves-list',
   templateUrl: './dance-moves-list.component.html',

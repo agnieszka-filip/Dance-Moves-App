@@ -25,6 +25,13 @@ export class DanceMovesService {
                 new RequiredSkill('Handspring')
             ])
       ];
+    
+    //private danceMoves: DanceMove[] = [];
+      
+    setDanceMoves(danceMoves: DanceMove[]) {
+        this.danceMoves = danceMoves;
+        this.danceMovesChanged.next(this.danceMoves.slice());
+      }
 
       getDanceMoves() {
           return this.danceMoves.slice();
