@@ -29,7 +29,8 @@
               class="dropdown-menu"
               [ngClass]="{'show':r.isOpen}">
             <a
-              class="dropdown-item dropdown-i-style">
+              class="dropdown-item dropdown-i-style"
+              (click)="onSaveData()">
               Save Data
             </a>
             <a
