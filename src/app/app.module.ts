@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DanceMovesStartComponent } from './dance-moves/dance-moves-start/dance-moves-start.component';
 import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move-edit.component';
 import { DanceMovesService } from './dance-moves/dance-moves.service';
+import { DataStorageService } from './dance-moves/data-storage.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { DanceMovesService } from './dance-moves/dance-moves.service';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [DanceMovesService],
+  providers: [DanceMovesService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
