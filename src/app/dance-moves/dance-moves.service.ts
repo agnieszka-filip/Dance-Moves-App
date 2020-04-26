@@ -8,7 +8,7 @@ import { RequiredSkill } from './required-skill.model';
 export class DanceMovesService {
     danceMovesChanged = new Subject<DanceMove[]>();
 
-    private danceMoves: DanceMove[] = [
+    /*private danceMoves: DanceMove[] = [
         new DanceMove(
             'Elbow Aysha',
             'This is just a test',
@@ -24,9 +24,9 @@ export class DanceMovesService {
             [
                 new RequiredSkill('Handspring')
             ])
-      ];
+      ];*/
     
-    //private danceMoves: DanceMove[] = [];
+    private danceMoves: DanceMove[] = [];
       
     setDanceMoves(danceMoves: DanceMove[]) {
         this.danceMoves = danceMoves;

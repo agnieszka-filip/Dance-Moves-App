@@ -15,6 +15,7 @@ import { DanceMovesStartComponent } from './dance-moves/dance-moves-start/dance-
 import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move-edit.component';
 import { DanceMovesService } from './dance-moves/dance-moves.service';
 import { DataStorageService } from './dance-moves/data-storage.service';
+import { DanceMovesResolverService } from './dance-moves/dance-moves-resolver.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { DataStorageService } from './dance-moves/data-storage.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [DanceMovesService, DataStorageService],
+  providers: [DanceMovesService, DataStorageService, DanceMovesResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

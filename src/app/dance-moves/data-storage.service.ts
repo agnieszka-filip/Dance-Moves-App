@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map, tap } from 'rxjs/operators';
 
 import { DanceMovesService } from './dance-moves.service';
 import { DanceMove } from './dance-moves-list/dance-move.model';
@@ -7,7 +8,7 @@ import { DanceMove } from './dance-moves-list/dance-move.model';
 @Injectable()
 export class DataStorageService {
     constructor(private http: HttpClient,
-        private danceMovesService: DanceMovesService) {}
+                private danceMovesService: DanceMovesService) {}
     
     storeDanceMoves() {
         const danceMoves = this.danceMovesService.getDanceMoves();
@@ -19,10 +20,20 @@ export class DataStorageService {
     }
 
     fetchDanceMoves() {
-        this.http
+        return this.http
             .get<DanceMove[]>('https://dance-moves-5afda.firebaseio.com/dance-moves.json')
-            .subscribe(danceMoves => {
-                this.danceMovesService.setDanceMoves(danceMoves);
-            });
+            .pipe(
+                map(danceMoves => {
+                    return danceMoves.map(danceMove => {
+                        return {
+                            ...danceMove,
+                            requiredSkills: danceMove.requiredSkills ? danceMove.requiredSkills : []
+                        };
+                    });
+                }),
+                tap(danceMoves => {
+                    this.danceMovesService.setDanceMoves(danceMoves);
+                })
+            );
     }
 }

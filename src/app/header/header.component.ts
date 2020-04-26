@@ -16,6 +16,6 @@ export class HeaderComponent {
     }
 
     onFetchData() {
-        this.dataStorageService.fetchDanceMoves();
+        this.dataStorageService.fetchDanceMoves().subscribe();
     }
 }
