@@ -1,46 +1,44 @@
-@import "src/app/styles/_variables.scss";
-@import "node_modules/bootstrap/scss/_functions.scss";
-@import "node_modules/bootstrap/scss/_variables.scss";
-@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+@import 'src/app/styles/_variables.scss';
+@import 'node_modules/bootstrap/scss/_functions.scss';
+@import 'node_modules/bootstrap/scss/_variables.scss';
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss';
 
 .navbar-style {
-    background-color: $purple;
-    padding: 1%;
-    justify-content: space-between;
+  background-color: $purple;
+  padding: 1%;
+  justify-content: space-between;
+  .app-logo {
+    color: $green;
+    font-size: 35px;
+    font-family: 'Fredoka One', cursive;
+    margin-right: 2%;
+  }
+  @include media-breakpoint-down(md) {
     .app-logo {
-        color: $green;
-        font-size: 35px;
-        font-family: 'Fredoka One', cursive;
-        margin-right: 2%;
+      font-size: 26px;
     }
-    @include media-breakpoint-down(md) {
-        .app-logo {
-            font-size: 26px;
-        }
+  }
+  .dropdown-name {
+    margin-left: -20%;
+    margin-top: 5%;
+    .dropdown-link {
+      color: $pink;
+      font-size: 18px;
+      cursor: pointer;
     }
-    .dropdown-name {
-        margin-left: -20%;
-        margin-top: 5%;
-        .dropdown-link {
-            color: $pink;
-            font-size: 18px;
-            cursor: pointer;  
-        }
+  }
+  .dropdown-i-style:hover {
+    background-color: $green;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .btn-header {
+    color: $pink;
+    border-color: $pink;
+    &:hover {
+      color: $purple;
+      background-color: $pink;
+      border-color: $pink;
     }
-    .dropdown-i-style:hover {
-        background-color: $green;
-        color: #ffffff;
-        cursor: pointer; 
-    }
-    .btn-header {
-        color: $pink;
-        border-color: $pink;
-        &:hover {
-            color: $purple;
-            background-color: $pink;
-            border-color: $pink;
-        }
-    }
+  }
 }
-
-

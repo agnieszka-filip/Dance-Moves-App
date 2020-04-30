@@ -1,21 +1,21 @@
-@import "src/app/styles/_variables.scss";
+@import 'src/app/styles/_variables.scss';
 
 .btn-details {
-    background-color: $green;
+  background-color: $green;
 }
 
 .dropdown-i:hover {
-    background-color: $pink;
-    cursor: pointer;
-    .dropdown-link {
-        color: $purple;
-    }
+  background-color: $pink;
+  cursor: pointer;
+  .dropdown-link {
+    color: $purple;
+  }
 }
 
 .move-description {
-    margin-top: 7%;
+  margin-top: 7%;
 }
 
 .move-name {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
