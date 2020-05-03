@@ -5,7 +5,17 @@
         Sign up to add your dance moves!
       </h3>
       <br />
-      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+      <div class="alert alert-danger" *ngIf="error">
+        <p class="text-center">{{ error }}</p>
+      </div>
+      <div *ngIf="isLoading">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+      <form
+        #authForm="ngForm"
+        (ngSubmit)="onSubmit(authForm)"
+        *ngIf="!isLoading"
+      >
         <div class="form-group">
           <label for="email">Email:</label>
           <input
@@ -45,6 +55,7 @@
           </button>
         </div>
       </form>
+      <br />
     </div>
   </div>
 </div>

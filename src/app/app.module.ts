@@ -18,6 +18,8 @@ import { DataStorageService } from "./dance-moves/data-storage.service";
 import { DanceMovesResolverService } from "./dance-moves/dance-moves-resolver.service";
 import { AuthComponent } from "./auth/auth.component";
 import { ShortenPipe } from "./shorten.pipe";
+import { AuthService } from "./auth/auth.service";
+import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { ShortenPipe } from "./shorten.pipe";
     DanceMoveEditComponent,
     AuthComponent,
     ShortenPipe,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,12 @@ import { ShortenPipe } from "./shorten.pipe";
     FormsModule,
     HttpClientModule,
   ],
-  providers: [DanceMovesService, DataStorageService, DanceMovesResolverService],
+  providers: [
+    DanceMovesService,
+    DataStorageService,
+    DanceMovesResolverService,
+    AuthService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
