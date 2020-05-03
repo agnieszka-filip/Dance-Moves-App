@@ -1,5 +1,12 @@
 @import "src/app/styles/_variables.scss";
 
+.details-img {
+  max-height: 300px;
+  margin-top: 7%;
+  border-radius: 10px;
+  border: 2px solid $purple;
+}
+
 .dropdown-i-style {
   color: black;
   &:hover {
@@ -9,16 +16,21 @@
   }
 }
 
-.indent-top {
-  margin-top: 30%;
-  margin-left: 25%;
-}
-
 .indent {
-  margin-top: 10%;
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 .move-name {
-  margin-bottom: 5%;
+  margin: 5% 0% 2% 0%;
+}
+
+.par {
+  margin: 15% 0% 1% 0%;
+}
+
+.cont-border {
+  border: 1px solid #c7c7c7b7;
+  border-radius: 15px;
+  margin: 5% 0% 5% 0%;
+  background-color: #ffffffbb;
 }
