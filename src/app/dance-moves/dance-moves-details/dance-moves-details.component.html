@@ -16,46 +16,38 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <div class="btn-group" appDropdown #r="appDropdown">
-        <button type="button" class="btn dropdown-toggle btn-details">
+      <div class="dropdown" appDropdown #r="appDropdown">
+        <button class="btn btn-green dropdown-toggle" type="button">
           Options<span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
-          <li>
-            <a
-              class="dropdown-link dropdown-i-style"
-              (click)="onEditDanceMove()"
-            >
-              Edit</a
-            >
-          </li>
-          <li>
-            <a
-              class="dropdown-link dropdown-i-style"
-              (click)="onDeleteDanceMove()"
-            >
-              Delete</a
-            >
-          </li>
-        </ul>
+        <div class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
+          <a class="dropdown-item dropdown-i-style" (click)="onEditDanceMove()"
+            >Edit</a
+          >
+          <a
+            class="dropdown-item dropdown-i-style"
+            (click)="onDeleteDanceMove()"
+            >Delete</a
+          >
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row move-description">
-    <div class="col-xs 12">
-      {{ danceMove.description }}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12" style="margin-bottom: 7%;">
-      <p style="margin: 15% 0% 1% 0%;">
-        <b>Required Skills</b>
-      </p>
-      <ul class="list-group">
-        <li *ngFor="let requiredSkill of danceMove.requiredSkills">
-          {{ requiredSkill.name }}
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-xs-12 offset-md-1 indent-top">
+          {{ danceMove.description }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 offset-md-1 indent">
+          <p style="margin: 15% 0% 1% 0%;">
+            <b>Required Skills</b>
+          </p>
+          <ul class="list-group">
+            <li *ngFor="let requiredSkill of danceMove.requiredSkills">
+              {{ requiredSkill.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

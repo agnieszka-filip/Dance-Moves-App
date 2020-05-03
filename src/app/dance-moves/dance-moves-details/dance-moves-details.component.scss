@@ -1,20 +1,22 @@
 @import "src/app/styles/_variables.scss";
 
-.btn-details {
-  background-color: $green;
-}
-
 .dropdown-i-style {
   color: black;
   &:hover {
-    background-color: $green;
+    background-color: $pink;
     color: #ffffff;
     cursor: pointer;
   }
 }
 
-.move-description {
-  margin-top: 7%;
+.indent-top {
+  margin-top: 30%;
+  margin-left: 25%;
+}
+
+.indent {
+  margin-top: 10%;
+  margin-left: 25%;
 }
 
 .move-name {
