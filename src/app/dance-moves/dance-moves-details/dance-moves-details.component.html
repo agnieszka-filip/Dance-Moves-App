@@ -21,11 +21,21 @@
           Options<span class="caret"></span>
         </button>
         <ul class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
-          <li class="dropdown-i">
-            <a class="dropdown-link" (click)="onEditDanceMove()"> Edit</a>
+          <li>
+            <a
+              class="dropdown-link dropdown-i-style"
+              (click)="onEditDanceMove()"
+            >
+              Edit</a
+            >
           </li>
-          <li class="dropdown-i">
-            <a class="dropdown-link" (click)="onDeleteDanceMove()"> Delete</a>
+          <li>
+            <a
+              class="dropdown-link dropdown-i-style"
+              (click)="onDeleteDanceMove()"
+            >
+              Delete</a
+            >
           </li>
         </ul>
       </div>

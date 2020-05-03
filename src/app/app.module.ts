@@ -15,7 +15,8 @@ import { DanceMovesStartComponent } from './dance-moves/dance-moves-start/dance-
 import { DanceMoveEditComponent } from './dance-moves/dance-move-edit/dance-move-edit.component'
 import { DanceMovesService } from './dance-moves/dance-moves.service'
 import { DataStorageService } from './dance-moves/data-storage.service'
-import { DanceMovesResolverService } from './dance-moves/dance-moves-resolver.service'
+import { DanceMovesResolverService } from './dance-moves/dance-moves-resolver.service';
+import { AuthComponent } from './auth/auth.component'
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DanceMovesResolverService } from './dance-moves/dance-moves-resolver.se
     DropdownDirective,
     DanceMovesStartComponent,
     DanceMoveEditComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,

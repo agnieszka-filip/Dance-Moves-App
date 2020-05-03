@@ -1,14 +1,15 @@
-@import 'src/app/styles/_variables.scss';
+@import "src/app/styles/_variables.scss";
 
 .btn-details {
   background-color: $green;
 }
 
-.dropdown-i:hover {
-  background-color: $pink;
-  cursor: pointer;
-  .dropdown-link {
-    color: $purple;
+.dropdown-i-style {
+  color: black;
+  &:hover {
+    background-color: $green;
+    color: #ffffff;
+    cursor: pointer;
   }
 }
 

@@ -1,11 +1,11 @@
-@import 'src/app/styles/variables.scss';
+@import "src/app/styles/variables.scss";
 
 body {
   background-color: $blue;
   font-family: $main-font;
 }
 
-.btn-new-move {
+.btn-pink {
   color: $purple;
   background-color: $pink;
   border-color: $pink;
