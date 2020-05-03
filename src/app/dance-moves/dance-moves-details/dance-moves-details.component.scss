@@ -1,10 +1,30 @@
 @import "src/app/styles/_variables.scss";
+@import "node_modules/bootstrap/scss/_functions.scss";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+h1 {
+  font-size: 2em;
+}
 
 .details-img {
+  display: block;
   max-height: 300px;
   margin-top: 7%;
   border-radius: 10px;
   border: 2px solid $purple;
+}
+
+@include media-breakpoint-up(lg) {
+  .details-img {
+    float: right;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  button {
+    float: right;
+  }
 }
 
 .dropdown-i-style {
@@ -21,11 +41,17 @@
 }
 
 .move-name {
-  margin: 5% 0% 2% 0%;
+  margin: 10% 0% 2% 0%;
+}
+
+@include media-breakpoint-up(md) {
+  .move-name {
+    margin: 5% 0% 2% 0%;
+  }
 }
 
 .par {
-  margin: 15% 0% 1% 0%;
+  margin: 5% 0% 1% 0%;
 }
 
 .cont-border {

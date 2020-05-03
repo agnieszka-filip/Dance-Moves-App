@@ -1,12 +1,12 @@
 <div class="cont-border">
   <div class="container">
     <div class="row move-name">
-      <div class="col-xs-12 offset-md-1">
-        <h1>{{ danceMove.name }}</h1>
+      <div class="col-xs-12 offset-lg-1">
+        <h1 class="text-center">{{ danceMove.name }}</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-md-4 offset-md-1">
+      <div class="col-xs-12 col-lg-4 offset-lg-1">
         <p class="par">
           <b>Required Skills</b>
         </p>
@@ -23,12 +23,10 @@
         </p>
         {{ danceMove.description }}
       </div>
-      <div class="col-xs-12 col-md-5 offset-md-1">
-        <div class="dropdown" appDropdown #r="appDropdown">
-          <button
-            class="btn btn-green dropdown-toggle float-right"
-            type="button"
-          >
+      <br />
+      <div class="col-xs-12 col-lg-5 offset-lg-1">
+        <div class="dropdown text-center" appDropdown #r="appDropdown">
+          <button class="btn btn-green dropdown-toggle mt-3 mb-1" type="button">
             Options<span class="caret"></span>
           </button>
           <div class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
@@ -44,11 +42,10 @@
             >
           </div>
         </div>
-        <br />
         <img
           [src]="danceMove.imageVideoPath"
           alt="{{ danceMove.name }}"
-          class="img-responsive details-img float-right"
+          class="img-responsive details-img mx-auto"
         />
       </div>
     </div>
