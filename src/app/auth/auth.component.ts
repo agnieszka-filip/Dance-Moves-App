@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 
 import { AuthService } from "./auth.service";
 import { AuthResponseData } from "./auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-auth",
@@ -11,7 +12,7 @@ import { AuthResponseData } from "./auth.service";
   styleUrls: ["./auth.component.scss"],
 })
 export class AuthComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   isLoginMode = true;
   isLoading = false;
@@ -41,6 +42,7 @@ export class AuthComponent {
       (responseData) => {
         console.log(responseData);
         this.isLoading = false;
+        this.router.navigate(["/dance-moves"]);
       },
       (errorMessage) => {
         console.log(errorMessage);
