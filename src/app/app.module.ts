@@ -21,6 +21,7 @@ import { ShortenPipe } from "./shorten.pipe";
 import { AuthService } from "./auth/auth.service";
 import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
 import { AuthInterceptorService } from "./auth/auth-interceptor.service";
+import { AuthGuard } from "./auth/auth.guard";
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AuthInterceptorService } from "./auth/auth-interceptor.service";
       useClass: AuthInterceptorService,
       multi: true,
     },
+    AuthGuard,
   ],
   bootstrap: [AppComponent],
 })

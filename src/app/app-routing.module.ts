@@ -7,12 +7,14 @@ import { DanceMovesDetailsComponent } from "./dance-moves/dance-moves-details/da
 import { DanceMoveEditComponent } from "./dance-moves/dance-move-edit/dance-move-edit.component";
 import { DanceMovesResolverService } from "./dance-moves/dance-moves-resolver.service";
 import { AuthComponent } from "./auth/auth.component";
+import { AuthGuard } from "./auth/auth.guard";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "/auth", pathMatch: "full" },
+  { path: "", redirectTo: "/dance-moves", pathMatch: "full" },
   {
     path: "dance-moves",
     component: DanceMovesComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: "", component: DanceMovesStartComponent },
       { path: "new", component: DanceMoveEditComponent },

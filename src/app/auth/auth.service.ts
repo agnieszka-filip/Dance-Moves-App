@@ -2,9 +2,9 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { catchError, tap } from "rxjs/operators";
 import { throwError, BehaviorSubject } from "rxjs";
+import { Router } from "@angular/router";
 
 import { User } from "./user.model";
-import { Router } from "@angular/router";
 
 export interface AuthResponseData {
   idToken: string;
@@ -106,7 +106,6 @@ export class AuthService {
   }
 
   autoLogout(expirationTime: number) {
-    console.log(expirationTime);
     this.tokenExpirationTimer = setTimeout(() => {
       this.logout();
     }, expirationTime);
