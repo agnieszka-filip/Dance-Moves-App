@@ -32,6 +32,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.dataStorageService.fetchDanceMoves().subscribe();
   }
 
+  onLogout() {
+    this.authService.logout();
+  }
+
   ngOnDestroy() {
     this.userSub.unsubscribe();
   }

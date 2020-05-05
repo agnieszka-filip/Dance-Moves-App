@@ -9,7 +9,7 @@ import { DanceMovesResolverService } from "./dance-moves/dance-moves-resolver.se
 import { AuthComponent } from "./auth/auth.component";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "/dance-moves", pathMatch: "full" },
+  { path: "", redirectTo: "/auth", pathMatch: "full" },
   {
     path: "dance-moves",
     component: DanceMovesComponent,
