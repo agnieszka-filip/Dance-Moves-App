@@ -22,6 +22,7 @@ import { AuthService } from "./auth/auth.service";
 import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
 import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { AuthGuard } from "./auth/auth.guard";
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AuthGuard } from "./auth/auth.guard";
     AuthComponent,
     ShortenPipe,
     LoadingSpinnerComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

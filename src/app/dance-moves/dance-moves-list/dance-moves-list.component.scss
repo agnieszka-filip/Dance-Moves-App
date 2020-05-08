@@ -1,7 +1,6 @@
 @import "src/app/styles/_variables.scss";
 
-.btn-search {
-  color: $purple;
-  background-color: $green;
-  border-color: $green;
+input {
+  border: 1px solid $lightPurple;
+  margin-right: -10%;
 }
