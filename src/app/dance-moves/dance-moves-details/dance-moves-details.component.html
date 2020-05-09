@@ -24,6 +24,11 @@
         {{ danceMove.description }}
       </div>
       <br />
+      <app-alert
+        *ngIf="delete"
+        (close)="onCloseAlert()"
+        (confirm)="onDeleteDanceMove()"
+      ></app-alert>
       <div class="col-xs-12 col-lg-5 offset-lg-1">
         <div class="dropdown text-center" appDropdown #r="appDropdown">
           <button class="btn btn-green dropdown-toggle mt-3 mb-1" type="button">
@@ -35,9 +40,7 @@
               (click)="onEditDanceMove()"
               >Edit</a
             >
-            <a
-              class="dropdown-item dropdown-i-style"
-              (click)="onDeleteDanceMove()"
+            <a class="dropdown-item dropdown-i-style" (click)="onClickDelete()"
               >Delete</a
             >
           </div>
