@@ -1,57 +1,39 @@
 <nav class="navbar navbar-expand-md navbar-style navbar-dark">
-    <a class="navbar-brand app-logo"
-      href="#"
-      style="margin-left: 3%;">
-      Dance Moves App
-    </a>
-  <div
-    appDropdown
-    #r="appDropdown">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse">
-      <span
-      class="navbar-toggler-icon">
-      </span>
-      </button>
-  
-    <div
-      class="collapse navbar-collapse navbar-search">
+  <a class="navbar-brand app-logo" href="#" style="margin-left: 3%;">
+    Dance Moves App
+  </a>
+  <div appDropdown #r="appDropdown">
+    <button class="navbar-toggler" type="button" data-toggle="collapse">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+
+    <div class="collapse navbar-collapse navbar-search">
       <ul class="navbar-nav">
         <li class="nav-item dropdown dropdown-name">
-        <a
-          class="nav-link dropdown-toggle dropdown-link"
-          role="button">
-          Manage
-        </a>
-          <div
-              class="dropdown-menu"
-              [ngClass]="{'show':r.isOpen}">
-            <a
-              class="dropdown-item dropdown-i-style">
+          <a class="nav-link dropdown-toggle dropdown-link" role="button">
+            Manage
+          </a>
+          <div class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
+            <a class="dropdown-item dropdown-i-style" (click)="onSaveData()">
               Save Data
             </a>
-            <a
-              class="dropdown-item dropdown-i-style">
+            <a class="dropdown-item dropdown-i-style" (click)="onFetchData()">
               Fetch Data
             </a>
           </div>
         </li>
       </ul>
-  
+
       <form class="form-inline my-2 my-lg-0 form-style">
         <input
           class="form-control search-form"
           type="search"
-          placeholder="Search">
-          <button
-          class="btn btn-header"
-          type="submit">
+          placeholder="Search"
+        />
+        <button class="btn btn-header" type="submit">
           Search
         </button>
       </form>
-      
     </div>
   </div>
 </nav>

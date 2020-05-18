@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-dance-moves-start',
   templateUrl: './dance-moves-start.component.html',
-  styleUrls: ['./dance-moves-start.component.scss']
+  styleUrls: ['./dance-moves-start.component.scss'],
 })
 export class DanceMovesStartComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

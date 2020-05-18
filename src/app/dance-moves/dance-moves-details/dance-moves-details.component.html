@@ -1,60 +1,51 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <img
-            [src]="danceMove.imageVideoPath"
-            alt="{{ danceMove.name }}"
-            class="img-responsive"
-            style="max-height: 350px; margin-top: 7%;">
-        </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="danceMove.imageVideoPath"
+        alt="{{ danceMove.name }}"
+        class="img-responsive"
+        style="max-height: 350px; margin-top: 7%;"
+      />
     </div>
-    <div class="row move-name">
-        <div class="col-xs-12">
-            <h1>{{ danceMove.name }}</h1>
-        </div>
+  </div>
+  <div class="row move-name">
+    <div class="col-xs-12">
+      <h1>{{ danceMove.name }}</h1>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="btn-group"
-            appDropdown #r="appDropdown">
-                <button type="button"
-                class="btn dropdown-toggle btn-details">
-                Options<span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu"
-                [ngClass]="{'show':r.isOpen}">
-                <li class="dropdown-i">
-                    <a 
-                    class="dropdown-link"
-                    (click)="onEditDanceMove()">
-                    Edit</a></li>
-                <li class="dropdown-i">
-                    <a 
-                    class="dropdown-link"
-                    (click)="onDeleteDanceMove()">
-                    Delete</a></li>
-            </ul>
-            </div>
-        </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group" appDropdown #r="appDropdown">
+        <button type="button" class="btn dropdown-toggle btn-details">
+          Options<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
+          <li class="dropdown-i">
+            <a class="dropdown-link" (click)="onEditDanceMove()"> Edit</a>
+          </li>
+          <li class="dropdown-i">
+            <a class="dropdown-link" (click)="onDeleteDanceMove()"> Delete</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="row move-description">
-        <div class="col-xs 12">
-            {{ danceMove.description }}
-        </div>
+  </div>
+  <div class="row move-description">
+    <div class="col-xs 12">
+      {{ danceMove.description }}
     </div>
-    <div class="row">
-        <div class="col-xs-12"
-            style="margin-bottom: 7%;">
-            <p
-                style="margin: 15% 0% 1% 0%;">
-                <b>Required Skills</b>
-            </p>
-            <ul class="list-group">
-                <li
-                    *ngFor="let requiredSkill of danceMove.requiredSkills">
-                    {{ requiredSkill.name }}
-                </li>
-            </ul>
-        </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" style="margin-bottom: 7%;">
+      <p style="margin: 15% 0% 1% 0%;">
+        <b>Required Skills</b>
+      </p>
+      <ul class="list-group">
+        <li *ngFor="let requiredSkill of danceMove.requiredSkills">
+          {{ requiredSkill.name }}
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
