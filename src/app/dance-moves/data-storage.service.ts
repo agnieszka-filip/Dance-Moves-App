@@ -4,14 +4,12 @@ import { map, tap, take, exhaustMap } from "rxjs/operators";
 
 import { DanceMovesService } from "./dance-moves.service";
 import { DanceMove } from "./dance-moves-list/dance-move.model";
-import { AuthService } from "../auth/auth.service";
 
 @Injectable()
 export class DataStorageService {
   constructor(
     private http: HttpClient,
-    private danceMovesService: DanceMovesService,
-    private authService: AuthService
+    private danceMovesService: DanceMovesService
   ) {}
 
   storeDanceMoves() {
@@ -21,9 +19,7 @@ export class DataStorageService {
         "https://dance-moves-5afda.firebaseio.com/dance-moves.json",
         danceMoves
       )
-      .subscribe((response) => {
-        console.log(response);
-      });
+      .subscribe();
   }
 
   fetchDanceMoves() {
