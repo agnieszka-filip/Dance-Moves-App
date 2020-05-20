@@ -1,0 +1,13 @@
+@import "src/app/styles/_variables.scss";
+
+.app-footer {
+  margin-bottom: 0;
+  background-color: rgba(24, 24, 24, 0.952);
+  font-size: small;
+  color: rgb(204, 202, 202);
+  position: absolute;
+  bottom: -2px;
+  .footer-link {
+    color: $pink !important;
+  }
+}
