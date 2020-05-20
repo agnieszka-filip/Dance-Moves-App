@@ -24,6 +24,7 @@ import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { AuthGuard } from "./auth/auth.guard";
 import { FilterPipe } from "./filter.pipe";
 import { AlertComponent } from "./alert/alert.component";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AlertComponent } from "./alert/alert.component";
     LoadingSpinnerComponent,
     FilterPipe,
     AlertComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

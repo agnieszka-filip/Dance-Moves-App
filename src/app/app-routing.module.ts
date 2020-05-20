@@ -8,6 +8,7 @@ import { DanceMoveEditComponent } from "./dance-moves/dance-move-edit/dance-move
 import { DanceMovesResolverService } from "./dance-moves/dance-moves-resolver.service";
 import { AuthComponent } from "./auth/auth.component";
 import { AuthGuard } from "./auth/auth.guard";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/dance-moves", pathMatch: "full" },
@@ -33,6 +34,10 @@ const appRoutes: Routes = [
   {
     path: "auth",
     component: AuthComponent,
+  },
+  {
+    path: "**",
+    component: PageNotFoundComponent,
   },
 ];
 
