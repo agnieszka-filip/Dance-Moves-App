@@ -1,15 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from "@angular/core";
+import {
+  Router,
+  Event,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError,
+} from "@angular/router";
 
 @Component({
-  selector: 'app-page-not-found',
-  templateUrl: './page-not-found.component.html',
-  styleUrls: ['./page-not-found.component.scss']
+  selector: "app-page-not-found",
+  templateUrl: "./page-not-found.component.html",
+  styleUrls: ["./page-not-found.component.scss"],
 })
-export class PageNotFoundComponent implements OnInit {
+export class PageNotFoundComponent {
+  timeLeft = 10;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private router: Router) {
+    router.events.subscribe((routerEvent: Event) => {
+      this.checkRouterEvent(routerEvent);
+    });
   }
 
+  checkRouterEvent(routerEvent: Event): void {
+    if (routerEvent instanceof NavigationEnd) {
+      const countdown = setInterval(() => {
+        if (this.timeLeft > 0) {
+          this.timeLeft--;
+        } else if (this.timeLeft === 0) {
+          this.router.navigate(["/dance-moves"]);
+          clearInterval(countdown);
+        }
+      }, 1000);
+    }
+
+    if (
+      routerEvent instanceof NavigationEnd ||
+      routerEvent instanceof NavigationCancel ||
+      routerEvent instanceof NavigationError
+    ) {
+    }
+  }
 }

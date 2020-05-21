@@ -1,3 +1,9 @@
+@import "src/app/styles/_variables.scss";
+
 div {
-  margin-top: 10%;
+  margin-top: 7%;
+}
+
+span {
+  color: $green;
 }
