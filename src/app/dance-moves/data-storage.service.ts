@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { map, tap, take, exhaustMap } from "rxjs/operators";
+import { HttpClient } from "@angular/common/http";
+import { map, tap } from "rxjs/operators";
 
 import { DanceMovesService } from "./dance-moves.service";
 import { DanceMove } from "./dance-moves-list/dance-move.model";

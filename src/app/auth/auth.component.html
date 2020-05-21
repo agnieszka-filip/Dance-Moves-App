@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 offset-md-3">
       <h3 class="text-center">
-        Sign up to add your dance moves!
+        {{ isLoginMode ? "Sign in" : "Sing up" }} to add your dance moves!
       </h3>
       <br />
       <div class="alert alert-danger" *ngIf="error">
@@ -47,11 +47,11 @@
             type="submit"
             [disabled]="!authForm.valid"
           >
-            {{ isLoginMode ? "Login" : "Sing Up" }}
+            {{ isLoginMode ? "Sign In" : "Sing Up" }}
           </button>
           |
           <button class="btn btn-pink" type="button" (click)="onSwitchMode()">
-            Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+            Switch to {{ isLoginMode ? "Sign Up" : "Sign In" }}
           </button>
         </div>
       </form>
