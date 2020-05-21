@@ -1,12 +1,19 @@
 @import "src/app/styles/_variables.scss";
 
+.app-body {
+  min-height: calc(100vh - 30px);
+}
+
+hr {
+  border: 0.3px solid $gray !important;
+}
+
 .app-footer {
-  margin-bottom: 0;
-  background-color: rgba(24, 24, 24, 0.952);
-  font-size: small;
-  color: rgb(204, 202, 202);
-  position: absolute;
-  bottom: -2px;
+  font-size: 10px;
+  height: 30px;
+  span {
+    color: $gray;
+  }
   .footer-link {
     color: $pink !important;
   }
