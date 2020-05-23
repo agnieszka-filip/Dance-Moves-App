@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { CookieService } from "ngx-cookie-service";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
@@ -56,6 +57,7 @@ import { WcagService } from "./dance-moves/wcag.service";
     DanceMovesService,
     DataStorageService,
     WcagService,
+    CookieService,
     DanceMovesResolverService,
     AuthService,
     {
