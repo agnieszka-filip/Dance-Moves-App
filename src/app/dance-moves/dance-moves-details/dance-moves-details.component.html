@@ -1,4 +1,4 @@
-<div class="cont-border">
+<div class="cont-border detail-box">
   <div class="container">
     <div class="row move-name">
       <div class="col-xs-12 offset-lg-1">
@@ -10,18 +10,18 @@
         <p class="par">
           <b>Required Skills</b>
         </p>
-        <ul class="list-group">
+        <ul class="list-group skills-list">
           <li
             *ngFor="let requiredSkill of danceMove.requiredSkills"
             class="indent"
           >
-            {{ requiredSkill.name }}
+            <p>{{ requiredSkill.name }}</p>
           </li>
         </ul>
         <p class="par">
           <b>Description</b>
         </p>
-        {{ danceMove.description }}
+        <p>{{ danceMove.description }}</p>
       </div>
       <br />
       <app-alert

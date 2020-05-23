@@ -26,6 +26,9 @@
       cursor: pointer;
     }
   }
+  .dropdown-menu.show {
+    margin-left: -60%;
+  }
   .dropdown-i-style {
     color: black;
     &:hover {

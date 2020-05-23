@@ -1,7 +1,7 @@
 @import "src/app/styles/_variables.scss";
 
 .app-body {
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 50px);
 }
 
 .app-footer {
@@ -24,7 +24,7 @@
   }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #000;
-    border-color: #adb5bd;
+    border-color: $gray;
   }
   .night-icon {
     margin-top: 2.5px;

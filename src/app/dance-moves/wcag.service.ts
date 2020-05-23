@@ -1,24 +1,25 @@
 import { Inject, Injectable, Renderer2, RendererFactory2 } from "@angular/core";
 import { DOCUMENT } from "@angular/common";
-@Injectable({
-  providedIn: "root",
-})
+
+@Injectable()
 export class WcagService {
-  private static readonly CONTRAST: string = "contrast";
-  isHighContrast = false;
+  private static readonly DARK: string = "dark";
+  isDarkMode = false;
   renderer2: Renderer2;
+
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private rendererFactory: RendererFactory2
   ) {
     this.renderer2 = rendererFactory.createRenderer(null, null);
   }
+
   onSetConstrast() {
-    if (this.isHighContrast) {
-      this.renderer2.removeClass(this.document.body, WcagService.CONTRAST);
+    if (this.isDarkMode) {
+      this.renderer2.removeClass(this.document.body, WcagService.DARK);
     } else {
-      this.renderer2.addClass(this.document.body, WcagService.CONTRAST);
+      this.renderer2.addClass(this.document.body, WcagService.DARK);
     }
-    this.isHighContrast = !this.isHighContrast;
+    this.isDarkMode = !this.isDarkMode;
   }
 }
