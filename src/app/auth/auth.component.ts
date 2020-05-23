@@ -17,9 +17,14 @@ export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
+  isEmailInputClicked = false;
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
+  }
+
+  onShowEmailAlert() {
+    this.isEmailInputClicked = true;
   }
 
   onSubmit(form: NgForm) {
