@@ -1,4 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from "@angular/core";
 
 import { AuthService } from "./auth/auth.service";
 import { WcagService } from "./dance-moves/wcag.service";
@@ -9,8 +15,9 @@ import { CookieService } from "ngx-cookie-service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent implements OnInit {
-  cookieValue = "UNKNOWN";
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild("modeSwitch") modeSwitch: ElementRef<HTMLElement>;
+  cookieValue = this.wcagService.cookieValue;
 
   constructor(
     private authService: AuthService,
@@ -18,17 +25,24 @@ export class AppComponent implements OnInit {
     private cookieService: CookieService
   ) {
     this.cookieValue = this.cookieService.get("Mode");
-    if (this.cookieValue == "dark") {
-      this.wcagService.onSetConstrast();
-    }
   }
 
   ngOnInit(): void {
     this.authService.autoLogin();
   }
 
+  ngAfterViewInit() {
+    if (this.cookieValue === "dark") {
+      this.triggerClick();
+    }
+  }
+
   onSwitchContrast() {
     this.wcagService.onSetConstrast();
-    this.cookieService.set("Mode", "dark");
+  }
+
+  triggerClick() {
+    let el: HTMLElement = this.modeSwitch.nativeElement;
+    el.click();
   }
 }
