@@ -4,10 +4,6 @@
   min-height: calc(100vh - 30px);
 }
 
-hr {
-  border: 0.3px solid $gray !important;
-}
-
 .app-footer {
   font-size: 10px;
   height: 30px;
@@ -16,5 +12,15 @@ hr {
   }
   .footer-link {
     color: $pink !important;
+  }
+  .custom-switch .custom-control-label::after {
+    background-color: $green;
+  }
+  .custom-switch .custom-control-label::before {
+    background-color: #fff;
+  }
+  .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #000;
+    border-color: lightslategrey;
   }
 }
