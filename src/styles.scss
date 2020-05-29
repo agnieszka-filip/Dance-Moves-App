@@ -1,14 +1,63 @@
-@import 'src/app/styles/variables.scss';
+@import "src/app/styles/variables.scss";
 
 body {
-  background-color: $blue;
+  background-color: $lightGreen;
   font-family: $main-font;
 }
 
-.btn-new-move {
+body.dark {
+  background-color: #1b1b1b;
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  label,
+  .skills-list {
+    color: $lightGray !important;
+  }
+  nav {
+    background-color: #2c2c2c !important;
+  }
+  input,
+  textarea {
+    background-color: #2727276e !important;
+    color: $lightPurple !important;
+    border-color: $lightGray !important;
+  }
+  .dropdown-menu.show {
+    background-color: $darkGray !important;
+    border-color: $lightGray;
+    .dropdown-i-style {
+      color: $lightGray;
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  .dance-moves-item,
+  .detail-box {
+    background-color: $darkGrayTrans !important;
+    border-color: $lightGray !important;
+  }
+  .backdrop {
+    background: #20202066;
+  }
+  .alert-box {
+    background-color: #1b1b1b;
+    border: 2px solid $purple;
+  }
+}
+
+.btn-pink {
   color: $purple;
   background-color: $pink;
   border-color: $pink;
+}
+
+.btn-green {
+  color: $purple;
+  background-color: $green;
 }
 
 a {

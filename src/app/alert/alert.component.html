@@ -1,0 +1,11 @@
+<div class="backdrop" (click)="onClose()">
+  <div class="alert alert-light mx-5 alert-box" role="alert">
+    <p>Do you really want to delete this dance move?</p>
+    <div class="alert-box-actions">
+      <button class="btn btn-green" (click)="onConfirm()">Delete</button>
+      <button class="btn btn-pink btn-cancel" (click)="onClose()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

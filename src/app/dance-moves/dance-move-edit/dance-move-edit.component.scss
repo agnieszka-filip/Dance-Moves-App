@@ -1,4 +1,4 @@
-@import 'src/app/styles/_variables.scss';
+@import "src/app/styles/_variables.scss";
 
 textarea,
 input {
@@ -26,4 +26,9 @@ input {
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
+}
+
+.img-edit {
+  max-height: 300px;
+  border-radius: 10px;
 }

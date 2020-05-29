@@ -1,0 +1,52 @@
+@import "node_modules/bootstrap/scss/_functions.scss";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+}
+
+.alert-box {
+  top: 35vh;
+  z-index: 100;
+  background-color: #fff;
+  text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+  .alert-box {
+    width: 45vw;
+    left: 20vw;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .alert-box {
+    width: 35vw;
+    left: 30vw;
+  }
+}
+
+p {
+  margin-top: 2vh;
+  font-size: 1.3em;
+}
+
+.alert-box-actions {
+  text-align: center;
+}
+
+button {
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+
+.btn-cancel {
+  margin-left: 5vw;
+}
