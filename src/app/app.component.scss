@@ -7,29 +7,4 @@
 .app-footer {
   font-size: 10px;
   height: 30px;
-  span {
-    color: $gray;
-  }
-  .footer-link-pink {
-    color: $pink !important;
-  }
-  .footer-link-green {
-    color: $green !important;
-  }
-  .custom-switch .custom-control-label::after {
-    background-color: $green;
-  }
-  .custom-switch .custom-control-label::before {
-    background-color: #fff;
-  }
-  .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
-    background-color: #000;
-    border-color: $gray;
-  }
-  .night-icon {
-    margin-left: -5px;
-  }
-  .day-icon {
-    margin-right: 4px;
-  }
 }
