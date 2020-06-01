@@ -27,6 +27,7 @@ import { FilterPipe } from "./filter.pipe";
 import { AlertComponent } from "./alert/alert.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { WcagService } from "./dance-moves/wcag.service";
+import { SideNavbarComponent } from "./header/side-navbar/side-navbar.component";
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { WcagService } from "./dance-moves/wcag.service";
     FilterPipe,
     AlertComponent,
     PageNotFoundComponent,
+    SideNavbarComponent,
   ],
   imports: [
     BrowserModule,

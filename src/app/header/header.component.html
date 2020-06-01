@@ -1,19 +1,26 @@
-<nav class="navbar navbar-expand-md navbar-dark navbar-style">
+<!--<nav class="navbar navbar-expand-md navbar-dark navbar-style">
   <a class="navbar-brand app-logo" href="#">
     Dance Moves App
   </a>
-  <button class="navbar-toggler" type="button">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
+
+  <div class="">
     <ul class="navbar-nav mr-auto"></ul>
     <span class="navbar-text">
       <div appDropdown #r="appDropdown" *ngIf="isAuthenticated">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="float-right">
+          <li class="nav-item">
+             <button
+              class="btn-hamburger"
+              type="button"
+              (click)="toggleNavbar()"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </li>
           <li class="nav-item dropdown dropdown-name">
             <a class="nav-link dropdown-toggle dropdown-link" role="button">
-              Manage
-            </a>
+              Manage</a
+            >
             <div class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
               <a class="dropdown-item dropdown-i-style" (click)="onSaveData()">
                 Save Data
@@ -29,5 +36,54 @@
         </ul>
       </div>
     </span>
+  </div>
+</nav>
+
+<nav class="navbar navbar-dark navbar-style">
+  <a class="navbar-brand app-logo" href="#">
+    Dance Moves App
+  </a>
+  <div *ngIf="isAuthenticated">
+    <button
+      type="button"
+      class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+      (click)="sideNavService.toggleSideNav()"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div
+      class="dropdown-menu"
+      [ngClass]="{ show: !sideNavService.isSideNavHidden }"
+    >
+      <a class="dropdown-item dropdown-i-style" (click)="onSaveData()">
+        Save Data
+      </a>
+      <a class="dropdown-item dropdown-i-style" (click)="onFetchData()">
+        Fetch Data
+      </a>
+      <a class="dropdown-item dropdown-i-style" (click)="onLogout()">Logout</a>
+    </div>
+  </div>
+</nav>-->
+<nav class="navbar navbar-dark navbar-style">
+  <a class="navbar-brand app-logo" href="#">
+    Dance Moves App
+  </a>
+  <div appDropdown #r="appDropdown" *ngIf="isAuthenticated">
+    <li class="nav-item dropdown dropdown-name">
+      <a class="nav-link dropdown-toggle dropdown-link" role="button"> </a>
+    </li>
+    <div
+      class="dropdown-menu-right dropdown-menu"
+      [ngClass]="{ show: r.isOpen }"
+    >
+      <a class="dropdown-item dropdown-i-style" (click)="onSaveData()">
+        Save Data
+      </a>
+      <a class="dropdown-item dropdown-i-style" (click)="onFetchData()">
+        Fetch Data
+      </a>
+      <a class="dropdown-item dropdown-i-style" (click)="onLogout()">Logout</a>
+    </div>
   </div>
 </nav>
