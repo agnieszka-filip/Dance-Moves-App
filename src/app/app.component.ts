@@ -1,14 +1,6 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 import { AuthService } from "./auth/auth.service";
-import { WcagService } from "./dance-moves/wcag.service";
-import { CookieService } from "ngx-cookie-service";
 
 @Component({
   selector: "app-root",
