@@ -1,4 +1,4 @@
-import { TestBed } from "@angular/core/testing";
+/*import { TestBed } from "@angular/core/testing";
 import { PageNotFoundComponent } from "./page-not-found.component";
 
 describe("Component: Page Not Found", () => {
@@ -22,4 +22,4 @@ describe("Component: Page Not Found", () => {
       "Page not found!"
     );
   });
-});
+});*/
