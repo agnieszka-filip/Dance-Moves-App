@@ -4,7 +4,6 @@ import { RouterTestingModule } from "@angular/router/testing";
 
 import { AppComponent } from "./app.component";
 import { AuthService } from "./auth/auth.service";
-
 import { FooterComponent } from "./footer/footer.component";
 import { HeaderComponent } from "./header/header.component";
 import { DataStorageService } from "./dance-moves/data-storage.service";
@@ -25,21 +24,28 @@ describe("AppComponent", () => {
     }).compileComponents();
   }));
 
-  /*it("should create the app", () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    //const app = TestBed.inject(AppComponent);
-    const authService = TestBed.inject(AuthService);
-    const router = TestBed.inject(Router);
-    const httpClient = TestBed.inject(HttpClient);
-    //fixture.detectChanges();
-    expect(app).toBeTruthy();*/
   it("should create the app", async(
     inject([AuthService], (authService: AuthService) => {
-      const fixture = TestBed.createComponent(AppComponent);
-      const app = fixture.debugElement.componentInstance;
+      let fixture = TestBed.createComponent(AppComponent);
+      let app = fixture.debugElement.componentInstance;
 
       expect(app).toBeTruthy();
     })
   ));
+
+  it("should display a dropdown icon if a user is logged in", () => {
+    let fixture = TestBed.createComponent(HeaderComponent);
+    let component = fixture.debugElement.componentInstance;
+    let compiled = fixture.debugElement.nativeElement;
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    expect(compiled.querySelector(".app-dropdown")).toBeTruthy;
+  });
+
+  it("shouldn't display a dropdown icon if a user is not logged in", () => {
+    let fixture = TestBed.createComponent(HeaderComponent);
+    fixture.detectChanges();
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector(".app-dropdown")).not.toBeTruthy;
+  });
 });

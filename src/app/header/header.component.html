@@ -2,7 +2,12 @@
   <a class="navbar-brand app-logo" href="#">
     Dance Moves App
   </a>
-  <div appDropdown #r="appDropdown" *ngIf="isAuthenticated">
+  <div
+    class="app-dropdown"
+    appDropdown
+    #r="appDropdown"
+    *ngIf="isAuthenticated"
+  >
     <li class="nav-item dropdown dropdown-name">
       <a class="nav-link dropdown-toggle dropdown-link" role="button"> </a>
     </li>
