@@ -28,10 +28,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.dataStorageService.storeDanceMoves();
   }
 
-  onFetchData() {
-    this.dataStorageService.fetchDanceMoves().subscribe();
-  }
-
   onLogout() {
     this.authService.logout();
   }
