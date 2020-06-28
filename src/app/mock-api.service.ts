@@ -4,7 +4,7 @@ import { of } from "rxjs";
 
 @Injectable()
 export class MockApiService {
-  danceMoves: DanceMove[] = [
+  mockDanceMoves: DanceMove[] = [
     {
       name: "Allegra",
       description: "Test",
@@ -14,7 +14,7 @@ export class MockApiService {
   ];
   constructor() {}
 
-  get() {
-    return of(this.danceMoves);
+  fetchMockDanceMoves() {
+    return of(this.mockDanceMoves);
   }
 }
