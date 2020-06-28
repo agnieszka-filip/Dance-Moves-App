@@ -28,6 +28,7 @@ import { AlertComponent } from "./alert/alert.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { WcagService } from "./dance-moves/wcag.service";
 import { FooterComponent } from "./footer/footer.component";
+import { MockApiService } from "./mock-api.service";
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { FooterComponent } from "./footer/footer.component";
     DataStorageService,
     WcagService,
     CookieService,
+    MockApiService,
     DanceMovesResolverService,
     AuthService,
     {
