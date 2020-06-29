@@ -1,4 +1,4 @@
-import { TestBed, async, inject } from "@angular/core/testing";
+import { TestBed, async, inject, fakeAsync, tick } from "@angular/core/testing";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 
@@ -33,19 +33,22 @@ describe("AppComponent", () => {
     })
   ));
 
-  it("should display a dropdown icon if a user is logged in", () => {
+  it("should display a dropdown icon if a user is logged in", async(() => {
     let fixture = TestBed.createComponent(HeaderComponent);
     let component = fixture.debugElement.componentInstance;
     let compiled = fixture.debugElement.nativeElement;
     component.isAuthenticated = true;
     fixture.detectChanges();
-    expect(compiled.querySelector(".app-dropdown")).toBeTruthy;
-  });
+    fixture.whenStable().then(() => {
+      expect(compiled.querySelector(".app-dropdown")).toBeTruthy;
+    });
+  }));
 
-  it("shouldn't display a dropdown icon if a user is not logged in", () => {
+  it("shouldn't display a dropdown icon if a user is not logged in", fakeAsync(() => {
     let fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
+    tick();
     expect(compiled.querySelector(".app-dropdown")).not.toBeTruthy;
-  });
+  }));
 });
