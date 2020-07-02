@@ -38,7 +38,7 @@ The idea for creating Dance Moves App was born when I started training in a new 
 
 ## Sources
 
-This app was inspired by this Udemy course: [Angular - The Complete Guide](https://www.udemy.com/course/the-complete-guide-to-angular-2/?fbclid=IwAR2wtTIngBK94YRfnn0QGTGoo6Hiv9Fjh51anLqHyBc2ehA3At_9K0TzzAg) by Maximilian Schwarzmüller.
+This app was inspired by the following Udemy course: [Angular - The Complete Guide](https://www.udemy.com/course/the-complete-guide-to-angular-2/?fbclid=IwAR2wtTIngBK94YRfnn0QGTGoo6Hiv9Fjh51anLqHyBc2ehA3At_9K0TzzAg) by Maximilian Schwarzmüller.
 
 ## Status
 
