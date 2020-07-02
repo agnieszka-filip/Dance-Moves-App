@@ -21,6 +21,11 @@ The idea for creating Dance Moves App was born when I started training in a new 
 
 ## Screenshots
 
+![screenshot of auth component](https://raw.githubusercontent.com/agnieszka-filip/Dance-Moves-App/master/images/screenshot-auth.png)
+![screenshot of app details](https://raw.githubusercontent.com/agnieszka-filip/Dance-Moves-App/master/images/screenshot-details.png)
+![screenshot of app's dark mode](https://raw.githubusercontent.com/agnieszka-filip/Dance-Moves-App/master/images/screenshot-dark.png)
+![screenshot of page not found](https://raw.githubusercontent.com/agnieszka-filip/Dance-Moves-App/master/images/screenshot-not-found.png)
+
 ## Technologies
 
 - Angular 10.0.0
