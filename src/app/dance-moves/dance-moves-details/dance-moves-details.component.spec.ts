@@ -1,7 +1,7 @@
 import { TestBed, ComponentFixture } from "@angular/core/testing";
 import { ActivatedRoute, Router, Params } from "@angular/router";
 import { RouterTestingModule } from "@angular/router/testing";
-import { of, from } from "rxjs";
+import { from } from "rxjs";
 
 import { DanceMovesDetailsComponent } from "./dance-moves-details.component";
 import { DanceMovesService } from "../dance-moves.service";
@@ -42,6 +42,15 @@ describe("Dance Moves Details Component", () => {
 
     expect(fixture.nativeElement.querySelector("h1").textContent).toContain(
       "Seahorse"
+    );
+    done();
+  });
+
+  it("should render the description of the dance move in the p element, class .descr", (done) => {
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector(".descr").textContent).toContain(
+      "A very pretty move"
     );
     done();
   });
