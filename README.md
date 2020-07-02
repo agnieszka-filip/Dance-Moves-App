@@ -1,27 +1,48 @@
-# DanceMovesApp
+# Dance Moves App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+Dance Moves App is an Angular application which stores descriptions and photos of dance moves. Created with Angular, Bootstrap, TypeScript, SCSS and love! :heartpulse:
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Table of contents
 
-## Code scaffolding
+  - [General info](#general-info)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Sources](#sources)
+  - [Status](#status)
+  - [Licence](#licence)
+  - [Contact](#contact)
+  
+  
+  ## General info
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The idea for creating Dance Moves App was born when I started training in a new dance school. The lack of cohesion in naming dance moves made it difficult to communicate with my instructor, so I decided to create an application to help us systematize them. Incidentally, around that time I began to learn Angular on [Udemy](https://www.udemy.com/course/the-complete-guide-to-angular-2/?fbclid=IwAR2wtTIngBK94YRfnn0QGTGoo6Hiv9Fjh51anLqHyBc2ehA3At_9K0TzzAg) and I applied my newly acquired knowledge in practice. I hope you'll enjoy it! :dancer:
 
-## Build
+## Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies
 
-## Running unit tests
+- Angular 10.0.0
+- TypeScript 3.9.5
+- Bootstrap 4
+- SCSS
+- HTML5
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup
 
-## Running end-to-end tests
+## Sources
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+This app was inspired by this Udemy course: [Angular - The Complete Guide](https://www.udemy.com/course/the-complete-guide-to-angular-2/?fbclid=IwAR2wtTIngBK94YRfnn0QGTGoo6Hiv9Fjh51anLqHyBc2ehA3At_9K0TzzAg) by Maximilian Schwarzmüller.
 
-## Further help
+## Status
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Almost finished! :relaxed:
+
+## Licence
+
+The application is under MIT licence.
+
+## Contact
+
+Created by [Agnieszka Filip](https://github.com/agnieszka-filip). Feel free to contact me! :email:
