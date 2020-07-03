@@ -36,6 +36,10 @@ The idea for creating Dance Moves App was born when I started training in a new 
 
 ## Setup
 
+Download a copy of the application either by using `git clone` or a .zip file. 
+Open the terminal and run `npm install`.
+To see a live preview of the app, run `ng serve`.
+
 ## Sources
 
 This app was inspired by the following Udemy course: [Angular - The Complete Guide](https://www.udemy.com/course/the-complete-guide-to-angular-2/?fbclid=IwAR2wtTIngBK94YRfnn0QGTGoo6Hiv9Fjh51anLqHyBc2ehA3At_9K0TzzAg) by Maximilian Schwarzmüller.
