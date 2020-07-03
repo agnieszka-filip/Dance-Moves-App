@@ -36,7 +36,7 @@ The idea for creating Dance Moves App was born when I started training in a new 
 
 ## Setup
 
-Download a copy of the application either by using `git clone` or a .zip file. 
+Download a copy of the application by using either `git clone` or a .zip file. 
 Open the terminal and run `npm install`.
 To see a live preview of the app, run `ng serve`.
 
