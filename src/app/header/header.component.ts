@@ -3,7 +3,6 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import { DataStorageService } from "../dance-moves/data-storage.service";
 import { AuthService } from "../auth/auth.service";
 import { Subscription } from "rxjs";
-import { CookieService } from "ngx-cookie-service";
 
 @Component({
   selector: "app-header",
@@ -16,8 +15,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(
     private dataStorageService: DataStorageService,
-    private authService: AuthService,
-    private cookieService: CookieService
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -28,10 +26,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onSaveData() {
     this.dataStorageService.storeDanceMoves();
-  }
-
-  onFetchData() {
-    this.dataStorageService.fetchDanceMoves().subscribe();
   }
 
   onLogout() {

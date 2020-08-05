@@ -5,7 +5,7 @@
 
 .navbar-style {
   background-color: $purple;
-  padding: 1%;
+  padding: 0.5%;
   justify-content: space-between;
   .app-logo {
     color: $green;
@@ -19,16 +19,17 @@
     }
   }
   .dropdown-name {
-    margin-left: -35%;
+    margin-left: -25%;
+    list-style: none;
+    border-radius: 5px;
+    padding: 0 !important;
     .dropdown-link {
       color: $pink;
       font-size: 15px;
       cursor: pointer;
     }
   }
-  .dropdown-menu.show {
-    margin-left: -60%;
-  }
+
   .dropdown-i-style {
     color: black;
     &:hover {

@@ -27,6 +27,8 @@ import { FilterPipe } from "./filter.pipe";
 import { AlertComponent } from "./alert/alert.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { WcagService } from "./dance-moves/wcag.service";
+import { FooterComponent } from "./footer/footer.component";
+import { MockApiService } from "./mock-api.service";
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { WcagService } from "./dance-moves/wcag.service";
     FilterPipe,
     AlertComponent,
     PageNotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { WcagService } from "./dance-moves/wcag.service";
     DataStorageService,
     WcagService,
     CookieService,
+    MockApiService,
     DanceMovesResolverService,
     AuthService,
     {

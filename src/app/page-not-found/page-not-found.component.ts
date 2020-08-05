@@ -1,11 +1,5 @@
 import { Component } from "@angular/core";
-import {
-  Router,
-  Event,
-  NavigationEnd,
-  NavigationCancel,
-  NavigationError,
-} from "@angular/router";
+import { Router, Event, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: "app-page-not-found",
@@ -31,13 +25,6 @@ export class PageNotFoundComponent {
           clearInterval(countdown);
         }
       }, 1000);
-    }
-
-    if (
-      routerEvent instanceof NavigationEnd ||
-      routerEvent instanceof NavigationCancel ||
-      routerEvent instanceof NavigationError
-    ) {
     }
   }
 }
