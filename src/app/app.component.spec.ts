@@ -32,23 +32,4 @@ describe("AppComponent", () => {
       expect(app).toBeTruthy();
     })
   ));
-
-  it("should display a dropdown icon if a user is logged in", async(() => {
-    let fixture = TestBed.createComponent(HeaderComponent);
-    let component = fixture.debugElement.componentInstance;
-    let compiled = fixture.debugElement.nativeElement;
-    component.isAuthenticated = true;
-    fixture.detectChanges();
-    fixture.whenStable().then(() => {
-      expect(compiled.querySelector(".app-dropdown")).toBeTruthy;
-    });
-  }));
-
-  it("shouldn't display a dropdown icon if a user is not logged in", fakeAsync(() => {
-    let fixture = TestBed.createComponent(HeaderComponent);
-    fixture.detectChanges();
-    let compiled = fixture.debugElement.nativeElement;
-    tick();
-    expect(compiled.querySelector(".app-dropdown")).not.toBeTruthy;
-  }));
 });
