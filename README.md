@@ -1,6 +1,6 @@
 # Dance Moves App
 
-Dance Moves App is an Angular application which stores descriptions and photos of dance moves.  
+Dance Moves App (available live [here](https://agnieszka-filip.github.io/Dance-Moves-App/)) is an Angular application which stores descriptions and photos of dance moves.  
 Created with Angular, Bootstrap, TypeScript, SCSS and love! :heartpulse:
 
 
@@ -48,7 +48,7 @@ This app was inspired by the following Udemy course: [Angular - The Complete Gui
 
 ## Status
 
-Almost finished! :relaxed:
+Finished! :relaxed:
 
 ## Licence
 
